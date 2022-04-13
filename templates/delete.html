@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+    background-image:linear-gradient(to right,rgb(243, 46, 96),rgb(145, 46, 175),rgb(241, 98, 98))  ;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+font-size: 30px;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+        .in{
+            padding: 20px;}
+        .forms{
+            background-color: rgba(0, 255, 255, 0.233);
+            border: 1px solid black;
+            margin-left: 570px;
+            width: 25%;
+        }
+        input{
+            padding: 10px;
+            width: 93%;
+            }
+        select{
+            width: 100%;padding: 10px;
+        }
+        button{
+            padding: 10px;
+            background-color: rgb(113, 26, 116);
+            color: white;
+            width: 100%;
+        }
+        label{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>
+        Student registeration
+    </h1></center>
+    <form method="post" action="/delete">
+      <div class="forms">
+        <div class="in">
+            <label>Name:</label>
+         <center>   <input type="text" name="name" placeholder="name"></center>
+        </div>
+       <div class="in">
+          <label>Roll number:</label>
+        <center><input type="text" name="rollnumber" placeholder="rollno"></center>
+       </div>
+   <div class="in">
+       <center> <button type="submit">delete</button></center>
+      </div>
+      </div>
+   </form>
+</body>
+</html>
