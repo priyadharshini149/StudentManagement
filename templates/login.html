@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+  </head>
+  <style>
+    body {
+      background-image: linear-gradient(
+        to right,
+        rgb(243, 46, 96),
+        rgb(145, 46, 175),
+        rgb(241, 98, 98)
+      );
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+
+      font-size: 30px;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .form_container {
+      margin: auto;
+      padding: 20px;
+    }
+    input {
+      padding: 15px;
+      width: 100%;
+      background-color: transparent;
+      border-radius: 10px;
+      color: rgb(254, 254, 254);
+      font-weight: bold;
+      font-size: medium;
+      border: none;
+      border-bottom: 3px solid rgb(113, 26, 116);
+    }
+    input::placeholder {
+      color: rgb(254, 254, 254);
+      font-weight: bold;
+      font-size: medium;
+    }
+    input:focus {
+      border: none;
+      outline: none;
+      border-left: 6px solid rgb(113, 26, 116);
+      border-bottom: none;
+    }
+    .in {
+      padding: 30px;
+
+      margin: 15px;
+    }
+    h1 {
+      color: rgb(248, 242, 248);
+      font-weight: bold;
+      font-size: 70px;
+    }
+    .log {
+      background-color: rgba(7, 7, 7, 0.856);
+      padding: 20px;
+      width: 50%;
+      margin: auto;
+      box-shadow: 1px 1px 16px black;
+    }
+    button {
+      padding: 10px;
+      background-color: rgb(113, 26, 116);
+      color: #daf7a6;
+      border-radius: 5px;
+      font-size: 20px;
+      width: 100%;
+      border: none;
+    }
+  </style>
+  <body>
+    <div class="form_container">
+      <center><h1>LOGIN</h1></center>
+      <div class="log">
+        <form method="post" action="login/">
+          <div class="in">
+            <input type="text" name="name" placeholder="user name" /><br />
+          </div>
+          <div class="in">
+            <input
+              type="password"
+              name="password"
+              placeholder="password"
+            /><br />
+          </div>
+          <div class="in">
+            <button>login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

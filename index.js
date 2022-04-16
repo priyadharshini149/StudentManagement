@@ -18,19 +18,64 @@ app.get("", (req, res) => {
   res.sendFile(__dirname + "/templates/home.html");
 });
 
-app.get("/index.html", (req, res) => {
+app.get("/index", (req, res) => {
   res.sendFile(__dirname + "/templates/index.html");
 });
-app.get("/update.html", (req, res) => {
+app.get("/update", (req, res) => {
   res.sendFile(__dirname + "/templates/update.html");
 });
-app.get("/delete.html", (req, res) => {
+app.get("/delete", (req, res) => {
   res.sendFile(__dirname + "/templates/delete.html");
 });
+
 app.get("/read.html", (req, res) => {
   res.sendFile(__dirname + "/templates/read.html");
 });
+app.get("/login.html", (req, res) => {
+  res.sendFile(__dirname + "/templates/login.html");
+});
+app.get("/manage_details.html", (req, res) => {
+  res.sendFile(__dirname + "/templates/manage_details.html");
+});
 
+// app.get("/manage_details.html", (req, res) => {
+//   try{
+//   const token = jwt.sign(
+//     { user_id: user._id, email },
+//     process.env.TOKEN_KEY,
+//     {
+//       expiresIn: "2h",
+//     }
+//   );
+//   // save user token
+//   user.token = token;
+//   res.sendFile(__dirname + "/templates/manage_details.html");
+//   }
+
+// });
+app.post("/login", function (req, res) {
+  var name = req.body.name;
+  var password = req.body.password;
+  var data = {
+    name: name,
+  };
+  var query = { name: data.name };
+  db.collection("user").findOne(query, function (err, result) {
+    if (err) throw err;
+    resl = result;
+    console.log(password, resl);
+    if (resl == null) {
+      res.status(409).send("User not Exist");
+      return;
+    } else {
+      if (password == resl.password) {
+        res.sendFile(__dirname + "/templates/manage_details.html");
+      } else {
+        res.status(409).send("password incorrect");
+      }
+    }
+  });
+});
 app.post("/insert", function (req, res) {
   var name = req.body.name;
   var rollnumber = req.body.rollnumber;
