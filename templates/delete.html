@@ -1,73 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete details</title>
     <style>
       body {
-    background-image:linear-gradient(to right,rgb(243, 46, 96),rgb(145, 46, 175),rgb(241, 98, 98))  ;
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+        background-image: linear-gradient(
+          to right,
+          rgb(243, 46, 96),
+          rgb(145, 46, 175),
+          rgb(241, 98, 98)
+        );
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
 
-font-size: 30px;
-}
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-        .in{
-            padding: 20px;}
-        .forms{
-            background-color: rgba(0, 255, 255, 0.233);
-            border: 1px solid black;
-            margin-left: 570px;
-            width: 25%;
+        font-size: 30px;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
         }
-        input{
-            padding: 10px;
-            width: 93%;
-            }
-        select{
-            width: 100%;padding: 10px;
+        50% {
+          background-position: 100% 50%;
         }
-        button{
-            padding: 10px;
-            background-color: rgb(113, 26, 116);
-            color: white;
-            width: 100%;
+        100% {
+          background-position: 0% 50%;
         }
-        label{
-            font-size: 20px;
-        }
+      }
+      h1 {
+        font-size: 50px;
+        color: white;
+      }
+      .in {
+        padding: 10px;
+
+        margin: 15px;
+      }
+      .forms {
+        background-color: rgba(8, 8, 8, 0.848);
+        padding: 20px;
+        width: 40%;
+        margin: auto;
+        box-shadow: 1px 1px 16px black;
+      }
+      input {
+        padding: 15px;
+        width: 96%;
+        background-color: transparent;
+        border-radius: 10px;
+        color: rgb(254, 254, 254);
+        font-weight: bold;
+        font-size: medium;
+        border: none;
+        border-bottom: 3px solid rgba(113, 26, 116, 0.963);
+      }
+
+      input::placeholder {
+        color: rgb(174, 172, 172);
+      }
+      select {
+        width: 100%;
+        padding: 10px;
+      }
+      button {
+        padding: 10px;
+        background-color: rgb(113, 26, 116);
+        color: #daf7a6;
+        border-radius: 5px;
+        font-size: 20px;
+        width: 100%;
+        border: none;
+      }
+      label {
+        font-size: 20px;
+      }
     </style>
-</head>
-<body>
-    <center><h1>
-        Student registeration
-    </h1></center>
+  </head>
+  <body>
+    <center><h1>DELETE DETAILS</h1></center>
     <form method="post" action="/delete">
       <div class="forms">
         <div class="in">
-            <label>Name:</label>
-         <center>   <input type="text" name="name" placeholder="name"></center>
+          <center><input type="text" name="name" placeholder="name" /></center>
         </div>
-       <div class="in">
-          <label>Roll number:</label>
-        <center><input type="text" name="rollnumber" placeholder="rollno"></center>
-       </div>
-   <div class="in">
-       <center> <button type="submit">delete</button></center>
+        <div class="in">
+          <center>
+            <input type="text" name="rollnumber" placeholder="rollno" />
+          </center>
+        </div>
+        <div class="in">
+          <center><button type="submit">delete</button></center>
+        </div>
+        <h5 style="text-align: center">
+          <a href="/manage_details">back</a>
+        </h5>
       </div>
-      </div>
-   </form>
-</body>
+    </form>
+  </body>
 </html>

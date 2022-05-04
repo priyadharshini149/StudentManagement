@@ -47,7 +47,7 @@
       border-bottom: 3px solid rgb(113, 26, 116);
     }
     input::placeholder {
-      color: rgb(254, 254, 254);
+      color: rgb(163, 162, 162);
       font-weight: bold;
       font-size: medium;
     }
@@ -90,12 +90,15 @@
   </style>
   <body>
     <div class="form_container">
-      <center><h1>LOGIN</h1></center>
+      <center><h1>REGISTER</h1></center>
 
       <div class="log">
-        <form method="post" action="login/">
+        <form method="post" action="register">
           <div class="in">
-            <input type="text" name="name" placeholder="email" /><br />
+            <input type="name" name="name" placeholder="name" /><br />
+          </div>
+          <div class="in">
+            <input type="email" name="email" placeholder="email" /><br />
           </div>
           <div class="in">
             <input
@@ -105,9 +108,9 @@
             /><br />
           </div>
           <div class="in">
-            <button>login</button>
+            <button>register</button>
             <h5 style="text-align: center">
-              Not have an account <a href="/register">Register</a>
+              All ready have an account <a href="/login">Login</a>
             </h5>
           </div>
         </form>

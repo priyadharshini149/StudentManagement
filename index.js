@@ -28,31 +28,35 @@ app.get("/delete", (req, res) => {
   res.sendFile(__dirname + "/templates/delete.html");
 });
 
-app.get("/read.html", (req, res) => {
+app.get("/read", (req, res) => {
   res.sendFile(__dirname + "/templates/read.html");
 });
-app.get("/login.html", (req, res) => {
+app.get("/login", (req, res) => {
   res.sendFile(__dirname + "/templates/login.html");
 });
-app.get("/manage_details.html", (req, res) => {
+app.get("/register", (req, res) => {
+  res.sendFile(__dirname + "/templates/register.html");
+});
+app.get("/manage_details", (req, res) => {
   res.sendFile(__dirname + "/templates/manage_details.html");
 });
 
-// app.get("/manage_details.html", (req, res) => {
-//   try{
-//   const token = jwt.sign(
-//     { user_id: user._id, email },
-//     process.env.TOKEN_KEY,
-//     {
-//       expiresIn: "2h",
-//     }
-//   );
-//   // save user token
-//   user.token = token;
-//   res.sendFile(__dirname + "/templates/manage_details.html");
-//   }
+app.post("/register", function (req, res) {
+  var name = req.body.name;
+  var email = req.body.email;
+  var password = req.body.password;
+  var data = {
+    name: name,
+    email: email,
+    password: password,
+  };
+  db.collection("users").insertOne(data, function (err, collection) {
+    if (err) throw err;
+  });
 
-// });
+  res.redirect("/login");
+});
+
 app.post("/login", function (req, res) {
   var name = req.body.name;
   var password = req.body.password;
@@ -60,7 +64,7 @@ app.post("/login", function (req, res) {
     name: name,
   };
   var query = { name: data.name };
-  db.collection("user").findOne(query, function (err, result) {
+  db.collection("users").findOne(query, function (err, result) {
     if (err) throw err;
     resl = result;
     console.log(password, resl);
@@ -69,7 +73,7 @@ app.post("/login", function (req, res) {
       return;
     } else {
       if (password == resl.password) {
-        res.sendFile(__dirname + "/templates/manage_details.html");
+        res.redirect("/manage_details");
       } else {
         res.status(409).send("password incorrect");
       }
