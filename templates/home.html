@@ -3,12 +3,12 @@
     <title>student details</title>
   </head>
   <style>
-    /* body {
-      background-image: url("https://www.studying-in-spain.com/wp-content/uploads/2013/08/students-life-spain.jpg");
+    body {
+      background-image: url("https://cdn.student.com/stumedia/2019/11/Partnerships-banner.png");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
-    } */
+    }
     .container {
       padding: 50px;
     }
@@ -34,29 +34,36 @@
 
     .container button {
       padding: 10px;
-      background-color: rgb(113, 26, 116);
-      color: #daf7a6;
+      background-color: rgb(250, 250, 250);
+      color: #000000;
       border-radius: 5px;
-      font-size: 20px;
+      font-size: 15px;
+      margin: 5px;
       border: none;
+    }
+    .container button:hover {
+      background-color: #000000;
+      color: white;
+      border: 2px solid white;
     }
 
     .head {
-      background-color: #070707b0;
-      margin: 40px;
+      background-color: #07070798;
+      margin: 90px;
       padding: 70px;
     }
     .head h1 {
-      font-size: 80px;
+      font-size: 60px;
+
       color: #f5f4f5;
     }
   </style>
   <body>
     <div class="container">
       <div class="head">
-        <center>
-          <h1>Students Details</h1>
+        <h1>Students Management</h1>
 
+        <center>
           <button onclick="location.href='/read'">view details</button>
           <button onclick="location.href='/login'">manage details</button>
         </center>

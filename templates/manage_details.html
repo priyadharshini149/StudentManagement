@@ -4,10 +4,11 @@
   </head>
   <style>
     body {
-      background-image: url("https://www.studying-in-spain.com/wp-content/uploads/2013/08/students-life-spain.jpg");
+      background-image: url("https://cdn.student.com/stumedia/2019/11/Partnerships-banner.png");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
+      margin: 0;
     }
     .container {
       padding: 50px;
@@ -32,36 +33,95 @@
       font-size: xx-large;
     }
 
-    .container button {
-      padding: 10px;
-      background-color: rgb(113, 26, 116);
-      color: #daf7a6;
-      border-radius: 5px;
-      font-size: 20px;
-    }
-
     .head {
       background-color: #070707b0;
       margin: 40px;
       padding: 70px;
-      margin-top: 80px;
+      margin-top: 50px;
+      color: white;
     }
     .head h1 {
-      font-size: 80px;
+      font-size: 70px;
       color: #f5f4f5;
+    }
+    .head p {
+      text-align: center;
+    }
+
+    .topnav {
+      position: relative;
+      overflow: hidden;
+      background-color: #333;
+      padding: 5px;
+      display: flex;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .topnav-centered a:hover {
+      background-color: transparent;
+      color: white;
+    }
+    .description {
+      display: flex;
+
+      width: 50%;
+    }
+    .description a {
+      margin: 10px;
+      width: 100%;
+      background-color: rgb(220, 220, 220);
+
+      text-decoration: none;
+      color: black;
+      border-radius: 10px;
+    }
+    .description a:hover {
+      background-color: #0e0d0d;
+      color: #ddd;
+      border: 1px solid white;
+    }
+    .description p {
+      font-size: 17px;
+    }
+    /* Responsive navigation menu (for mobile devices) */
+    @media screen and (max-width: 600px) {
+      .topnav a {
+        float: none;
+        display: block;
+      }
     }
   </style>
   <body>
+    <div class="topnav">
+      <a href="/">Home</a>
+    </div>
     <div class="container">
       <div class="head">
         <center>
-          <h1>Students Details</h1>
-
-          <button onclick="location.href='/insert'">insert data</button>
-          <button onclick="location.href='/update'">update data</button>
-
-          <button onclick="location.href='/delete'">delete details</button>
-          <button onclick="location.href='/'">home</button>
+          <h1>Manage details</h1>
+          <div class="description">
+            <a href="/insert">
+              <p>Insert</p>
+            </a>
+            <a href="/delete">
+              <p>delete</p>
+            </a>
+            <a href="/update">
+              <p>Update</p>
+            </a>
+          </div>
         </center>
       </div>
     </div>
