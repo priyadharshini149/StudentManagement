@@ -19,7 +19,7 @@ router.post("/insert", async function (req, res) {
   console.log(stud);
 
   res.send(
-    "<html><style>body {background-image:linear-gradient(to right,rgb(243, 46, 96),rgb(145, 46, 175),rgb(241, 98, 98))  ;background-size: 400% 400%;animation: gradient 15s ease infinite;}@keyframes gradient {0% {background-position: 0% 50%;}50% {background-position: 100% 50%;}100% {background-position: 0% 50%;}} .forms{ margin-top:200px;border-radius:20px;border: 3px solid black;margin-left: 570px;width: 25%;}</style><body><div class='forms'><center><h1 >successfully inserted</h1></center></div></body></html"
+    "<html><style>button{ width:35%;border-radius:10px;padding:7px;}body {background-image:linear-gradient(to right,rgb(243, 46, 96),rgb(145, 46, 175),rgb(241, 98, 98))  ;background-size: 400% 400%;animation: gradient 15s ease infinite;}@keyframes gradient {0% {background-position: 0% 50%;}50% {background-position: 100% 50%;}100% {background-position: 0% 50%;}} .forms{background-color: #333;color:white; width:35%;margin-top:200px;padding:30px; font-size:20px}</style><body><center><div class='forms'><h1 >successfully inserted</h1><button onclick='window.history.go(-1); return false;'>back</button></div></center></body></html"
   );
 });
 
@@ -41,7 +41,7 @@ router.post("/update", async function (req, res) {
   console.log(stud);
 
   res.send(
-    "<html><style>body {background-image:linear-gradient(to right,rgb(243, 46, 96),rgb(145, 46, 175),rgb(241, 98, 98))  ;background-size: 400% 400%;animation: gradient 15s ease infinite;}@keyframes gradient {0% {background-position: 0% 50%;}50% {background-position: 100% 50%;}100% {background-position: 0% 50%;}} .forms{ margin-top:200px;border-radius:20px;border: 3px solid black;margin-left: 570px;width: 25%;}</style><body><div class='forms'><center><h1 >successfully updated </h1></center></div></body></html"
+    "<html><style>button{ width:35%;border-radius:10px;padding:7px;}body {background-image:linear-gradient(to right,rgb(243, 46, 96),rgb(145, 46, 175),rgb(241, 98, 98))  ;background-size: 400% 400%;animation: gradient 15s ease infinite;}@keyframes gradient {0% {background-position: 0% 50%;}50% {background-position: 100% 50%;}100% {background-position: 0% 50%;}} .forms{ background-color: #333;color:white; width:35%;margin-top:200px;padding:30px; font-size:20px}</style><body><center><div class='forms'><h1 >successfully updated </h1><button onclick='window.history.go(-1); return false;'>back</button></div></center></body></html"
   );
 });
 
@@ -57,7 +57,7 @@ router.post("/delete", async function (req, res) {
   console.log(stud);
 
   res.send(
-    "<html><style>body {background-image:linear-gradient(to right,rgb(243, 46, 96),rgb(145, 46, 175),rgb(241, 98, 98))  ;background-size: 400% 400%;animation: gradient 15s ease infinite;}@keyframes gradient {0% {background-position: 0% 50%;}50% {background-position: 100% 50%;}100% {background-position: 0% 50%;}} .forms{ margin-top:200px;border-radius:20px;border: 3px solid black;margin-left: 570px;width: 25%;}</style><body><div class='forms'><center><h1 >successfully deleted</h1></center></div></body></html"
+    "<html><style>button{ width:35%;border-radius:10px;padding:7px;}body {background-image:linear-gradient(to right,rgb(243, 46, 96),rgb(145, 46, 175),rgb(241, 98, 98))  ;background-size: 400% 400%;animation: gradient 15s ease infinite;}@keyframes gradient {0% {background-position: 0% 50%;}50% {background-position: 100% 50%;}100% {background-position: 0% 50%;}} .forms{background-color: #333;color:white; width:35%;margin-top:200px;padding:30px; font-size:20px}</style><body><center><div class='forms'><h1 >successfully deleted</h1><button onclick='window.history.go(-1); return false;'>back</button></div></center></body></html"
   );
 });
 

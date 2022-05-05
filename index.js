@@ -115,27 +115,21 @@ app.post("/read", async function (req, res) {
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;}
             @keyframes gradient {0% {background-position: 0% 50%;}50% {background-position: 100% 50%;}100% {background-position: 0% 50%;}}
-            .forms{ margin-top:200px;border-radius:20px;border: 3px solid black;margin-left: 570px;width: 25%;}
+            button{ width:25%;border-radius:10px;padding:7px;}
+            .details{background-color: #333;color:white; width:35%;margin-top:200px;padding:30px; font-size:20px}
             </style><body>
-            <div class='forms'>
+           
             <center>
-    
-             </center>
-             <table>
-             <tr>
-             <td> Name <td>
-             <td> Rollnumber <td>
-             <td> Department <td>
-             <td> Section <td>
-             </tr>
-             <tr>
-             <td>${stud.name}</td>
-             <td>${stud.rollnumber}</td>
-             <td>${stud.department}</td>
-             <td>${stud.section}</td>
-             </tr>
-             </table>
-             </div>
+            <div class="details">
+            <p>Name: ${stud.name}</p>
+            <p>Roll number: ${stud.rollnumber} </p>
+            <p>Department: ${stud.department} </p>
+            <p>Section: ${stud.section}</p>
+            <button onclick="window.history.go(-1); return false;">back</button>
+            </div>    
+            </center>
+            
+            
              </body>
              </html>`
   );
