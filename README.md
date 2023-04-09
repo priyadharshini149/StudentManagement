@@ -2,8 +2,9 @@
 
 Here user can view student details. Admin can manage student details by `adding student details`, by `updating student details` and by `deleting student details`
 
-**To get start with this application**  
-**install all dependencies**
+**To get start with this application**
+
+**Install all dependencies**
 
 ```
 npm i
