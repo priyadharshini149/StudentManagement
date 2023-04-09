@@ -1,0 +1,91 @@
+<html>
+  <style>
+    body {
+      background-image: linear-gradient(
+        to right,
+        rgb(243, 46, 96),
+        rgb(145, 46, 175),
+        rgb(241, 98, 98)
+      );
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: rgb(255, 255, 255);
+      background-image: linear-gradient(
+        to right,
+        rgb(243, 46, 96),
+        rgb(145, 46, 175)
+      );
+      color: #fffcfc;
+      border-radius: 5px;
+      font-size: 20px;
+      width: 10%;
+      border: none;
+    }
+    .details {
+      background-color: #333;
+      border-radius: 10px;
+      color: white;
+      width: 90%;
+      margin-top: 50px;
+      padding: 30px;
+      font-size: 20px;
+    }
+    table {
+      color: white;
+      border: 1px solid white;
+      border-collapse: collapse;
+      width: inherit;
+      text-align: center;
+    }
+    table th {
+      border: 1px solid white;
+      padding: 10px;
+    }
+    table tr td {
+      border: 1px solid white;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <center>
+      <h1>Students Details</h1>
+      <div class="details">
+        <table>
+          <% const values = Object.values(data); %>
+          <% if (values.length!= 0) { %>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Department</th>
+            <th>Section</th>
+          <% for (let i = 0; i < values.length; i++){ %>
+          <tr>
+            <td><%= values[i].name %></td>
+            <td><%= values[i].rollnumber %></td>
+            <td><%= values[i].department %></td>
+            <td><%= values[i].section %></td>
+          </tr>
+          <% } %> <% } else { %>
+          <center>No record found!</center>
+          <% } %>
+        </table>
+
+        <button onclick="window.history.go(-1); return false;">back</button>
+      </div>
+    </center>
+  </body>
+</html>

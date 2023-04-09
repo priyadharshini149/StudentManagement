@@ -1,0 +1,46 @@
+<html>
+  <style>
+    button {
+      width: 35%;
+      border-radius: 10px;
+      padding: 7px;
+    }
+    body {
+      background-image: linear-gradient(
+        to right,
+        rgb(243, 46, 96),
+        rgb(145, 46, 175),
+        rgb(241, 98, 98)
+      );
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .forms {
+      background-color: #333;
+      color: white;
+      width: 35%;
+      margin-top: 200px;
+      padding: 30px;
+      font-size: 20px;
+    }
+  </style>
+  <body>
+    <center>
+      <div class="forms">
+        <h1><%= action %></h1>
+        <button onclick="window.history.go(-1); return false;">back</button>
+      </div>
+    </center>
+  </body>
+</html>
