@@ -1,6 +1,6 @@
 Student Management
  
-Here user can view particular student details. Admin can manage student details by adding students, by updating student details and by deleting student details
+Here user can view particular student details. Admin can manage student details by >adding students, by >updating student details and by >deleting student details
  
 Home page
  
@@ -34,6 +34,7 @@ View details of particular student
  
 ![image](https://user-images.githubusercontent.com/69582723/167305013-6670e935-25a5-4c6b-abc2-7332090074dd.png)
 ![image](https://user-images.githubusercontent.com/69582723/167305192-1d1825c0-da53-47b6-8665-7f1dcba6a647.png)
+
 
 
 
