@@ -2,6 +2,23 @@
 
 Here user can view student details. Admin can manage student details by `adding student details`, by `updating student details` and by `deleting student details`
 
+**To get start with this application**
+**install all dependencies**
+
+```
+npm i
+
+```
+
+**To run application**
+
+```
+nodemon index.js
+
+```
+
+# Screenshots of application
+
 **Home page**
 
 ![image](https://user-images.githubusercontent.com/69582723/167304944-e0780dbf-f7c3-4b5b-8169-04e8076a008f.png)
@@ -32,5 +49,5 @@ Only admin can `modify data`
 
 View details of students
 
-![image](https://user-images.githubusercontent.com/69582723/167305013-6670e935-25a5-4c6b-abc2-7332090074dd.png)    
+![image](https://user-images.githubusercontent.com/69582723/167305013-6670e935-25a5-4c6b-abc2-7332090074dd.png)  
 ![image](https://user-images.githubusercontent.com/69582723/230783101-6725ad62-2602-4da7-81b7-d290b9f96225.png)
