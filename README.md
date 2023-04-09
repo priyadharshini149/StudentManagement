@@ -33,7 +33,9 @@ User page
 View details of particular student
  
 ![image](https://user-images.githubusercontent.com/69582723/167305013-6670e935-25a5-4c6b-abc2-7332090074dd.png)
-![image](https://user-images.githubusercontent.com/69582723/167305192-1d1825c0-da53-47b6-8665-7f1dcba6a647.png)
+![image](https://user-images.githubusercontent.com/69582723/230783101-6725ad62-2602-4da7-81b7-d290b9f96225.png)
+
+
 
 
 
